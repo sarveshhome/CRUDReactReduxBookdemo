@@ -12,7 +12,11 @@
 3. install Axios
    `npm install axios`
 
-4. 
+4. Create Actions
+
+5. Create Redux Reducer
+
+
 
 
 
