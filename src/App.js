@@ -1,12 +1,11 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch,Route, Link } from "react-router-dom";
 import AddTutorial from "./components/add-tutorial.component";
 import Tutorial from "./components/tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
 import logo from './logo.svg';
-import { Routes,Route } from 'react-router-dom';
 import './App.css';
 class App extends Component {
   render() {
@@ -14,7 +13,7 @@ class App extends Component {
       <Router>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/tutorials"} className="navbar-brand">
-            bezKoder
+            Learning
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -31,11 +30,11 @@ class App extends Component {
         </nav>
 
         <div className="container mt-3">
-          <Routes>
+          <Switch>
             <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
             <Route exact path="/add" component={AddTutorial} />
             <Route path="/tutorials/:id" component={Tutorial} />
-          </Routes>
+          </Switch>
         </div>
       </Router>
     );
