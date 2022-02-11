@@ -16,6 +16,10 @@
 
 5. Create Redux Reducer
 
+6. Create Redux Store
+   `npm install redux react-redux redux-thunk`
+   
+   `npm install --save-dev redux-devtools-extension`
 
 
 
